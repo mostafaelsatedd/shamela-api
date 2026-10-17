@@ -84,8 +84,8 @@ async function downloadAndExtract(url) {
     const results = {};
     
     for (const entry of entries) {
-        if (entry.entryName.endsWith('.db')) {
-            const tableName = entry.entryName.replace('.db', '');
+        if (/\.db$/i.test(entry.entryName)) {
+            const tableName = path.basename(entry.entryName).replace(/\.db$/i, '').toLowerCase();
             const dbBuffer = entry.getData();
             const tempDbPath = path.join(CONFIG.CACHE_DIR, `temp_${Date.now()}.db`);
             
