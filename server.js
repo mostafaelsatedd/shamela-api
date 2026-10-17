@@ -80,6 +80,7 @@ async function downloadAndExtract(url) {
     
     const buffer = await response.arrayBuffer();
     const zip = new AdmZip(Buffer.from(buffer));
+    const entries = zip.getEntries();
     console.log('أسماء الملفات داخل ZIP:', entries.map(entry => entry.entryName));
     const results = {};
     
