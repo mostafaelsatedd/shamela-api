@@ -234,6 +234,7 @@ shamela_test/
 - [المكتبة الشاملة](https://shamela.ws)
 - [تطبيق تراث](https://app.turath.io)
 - [توثيق API الشاملة](https://dev.shamela.ws)
+تحديث تجريبي لنشر Railway
 
 ## 📄 الترخيص
 
